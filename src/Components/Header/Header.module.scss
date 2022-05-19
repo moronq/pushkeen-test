@@ -1,0 +1,28 @@
+@import 'src/const.scss';
+
+.bodyBar{
+  background: $mainDarkColor;
+  min-height: 70px;
+  width: 100%;
+  display: flex;
+}
+.navContainer{
+  margin: 0 auto;
+  width: $mainWidth;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBarButtonContainer{
+  display: flex;
+  gap: 12px;
+}
+
+.title{
+  color: #fff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  line-height: 60px;
+  font-weight: 700;
+}

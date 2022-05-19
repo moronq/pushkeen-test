@@ -1,0 +1,81 @@
+@import 'src/const.scss';
+
+.sliderWrapper{
+  height: 440px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1146px;
+  padding: 45px 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &:after{
+    content: url("./../../../img/gradient.png");
+    position: absolute;
+    bottom: -1px;
+    z-index: -2;
+  }
+}
+
+.sliderLogo{
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: -70px;
+  z-index: -3;
+}
+
+.sliderContainer{
+  color: #fff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: 110px;
+}
+
+.sliderTitleContainer{
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  &:before{
+    content: url("../../../img/ellipse-small.png");
+    top: -32px;
+    left: -102px;
+    max-width: 593px;
+    z-index: -1;
+  }
+  &:after{
+    content: url("../../../img/ellipse-wide.png");
+    z-index: -2;
+    left: -315px;
+    top: -35px;
+    max-width: 1017px;
+  }
+  &:before,
+  &:after{
+    position: absolute;
+    max-height: 156px;
+  }
+}
+
+.mainTitle{
+  line-height: 60px;
+  font-size: 50px;
+}
+.subTitle{
+  font-size: 30px;
+}
+
+.sliderButtonContainer{
+  width: $mainWidth;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
