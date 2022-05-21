@@ -1,0 +1,73 @@
+.userPageContainer{
+  max-width: 1209px;
+  border: 1px solid red;
+  padding: 35px 15px;
+  margin: 0 auto;
+}
+
+.userPageBody{
+  border: 1px solid black;
+  height: 660px;
+}
+
+.userNameWrapper, .userInfoWrapper{
+  outline: 1px solid black;
+}
+
+.userInfoWrapper{
+  margin-top: 1px;
+}
+
+.userName{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+  max-width: 100%;
+  outline: 1px solid black;
+  margin: 0 52px;
+  padding: 10px 17px;
+}
+.userInfoList{
+  margin: 1px 52px;
+  display: flex;
+  padding: 0;
+  outline: 1px solid black;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.userInfoItem{
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 17px;
+  height: 100%;
+  padding: 10px 5px;
+  flex: 1 1 auto;
+  text-align: center;
+  align-items: center;
+  &:not(:last-child){
+    outline: 1px solid black;
+  }
+}
+
+
+.posts{
+  max-width: 1209px;
+  padding: 0 52px;
+  outline: 1px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.postsContainer{
+  padding: 15px 0 30px;
+}
+
+.postTitle{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+}

@@ -1,0 +1,26 @@
+.postItemWrapper{
+  display: block;
+  outline: 1px solid black;
+  max-width: 490px;
+  padding: 14px 23px 17px 35px;
+}
+
+.postTitle{
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.postItemBody{
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 17px;
+  color: rgba(0,0,0,0.41);
+  display: block;
+  height: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

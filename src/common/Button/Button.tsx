@@ -9,6 +9,7 @@ type ButtonType = {
     background?: string
     color?: string
     fontSize?: string
+    callBackFn?: ()=>void
 }
 
 const Button: React.FC<ButtonType> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<ButtonType> = ({
                                           background = 'white',
                                           color = 'black',
                                           fontSize = '14px',
+                                          callBackFn,
                                           ...props
                                       }) => {
 
@@ -30,7 +32,7 @@ const Button: React.FC<ButtonType> = ({
     }
 
     return (
-        <button className={styles.buttonBody} style={styleButton}>
+        <button onClick={callBackFn} className={styles.buttonBody} style={styleButton}>
             {props.children}
         </button>
     );
