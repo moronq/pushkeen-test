@@ -11,7 +11,7 @@ type InitialStateType = {
     errorPost: string | undefined
 }
 
-const initialState:InitialStateType = {
+const initialState: InitialStateType = {
     statusInfo: 'idle',
     statusPost: 'idle',
     userInfo: {} as GetUsersType,
@@ -24,11 +24,16 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-
+        nullStatusPost: (state) => {
+            state.statusPost = 'idle'
+        },
+        nullStatusInfo: (state)=> {
+            state.statusInfo = 'idle'
+        }
     },
     extraReducers(builder) {
         builder
-            .addCase(fetchUserInfo.pending, (state)=>{
+            .addCase(fetchUserInfo.pending, (state) => {
                 state.statusInfo = 'loading'
             })
             .addCase(fetchUserInfo.fulfilled, (state, action: any) => {
@@ -39,7 +44,7 @@ export const userSlice = createSlice({
                 state.statusInfo = 'failed'
                 state.errorInfo = action.error.message
             })
-            .addCase(fetchUserPost.pending, (state)=>{
+            .addCase(fetchUserPost.pending, (state) => {
                 state.statusPost = 'loading'
             })
             .addCase(fetchUserPost.fulfilled, (state, action: any) => {
@@ -54,10 +59,10 @@ export const userSlice = createSlice({
     }
 })
 
-export const fetchUserInfo = createAsyncThunk('user/fetchUserInfo', async (id:string)=>{
+export const fetchUserInfo = createAsyncThunk('user/fetchUserInfo', async (id: string) => {
     return await UsersAPI.getUserInfo(id)
 })
-export const fetchUserPost = createAsyncThunk('user/fetchUserPost', async (id:string)=>{
+export const fetchUserPost = createAsyncThunk('user/fetchUserPost', async (id: string) => {
     return await UsersAPI.getUserPost(id)
 })
 
