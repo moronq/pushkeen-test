@@ -1,0 +1,24 @@
+.mainPageContainer{
+  max-width: 1025px;
+  padding: 35px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aboutAndFormWrapper{
+  display: flex;
+  justify-content: space-between;
+  height: 272px;
+}
+
+.aboutPlaceWrapper{
+  max-width: 370px;
+  height: 100%;
+  display: flex;
+}
+
+.concertFormWrapper{
+  min-width: 559px;
+}

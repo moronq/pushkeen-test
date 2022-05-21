@@ -1,0 +1,79 @@
+.aboutContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 1 auto;
+  height: 100%;
+}
+
+.aboutTitle{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 35px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.textWrapper{
+  max-height: 215px;
+  overflow-y: auto;
+  flex: 1 1 838px;
+  align-self: flex-start;
+  padding: 0 0 5px 40px;
+  direction: rtl;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-image:
+            linear-gradient(white,white),
+            linear-gradient(#cfd2db,#cfd2db),
+            linear-gradient(#cfd2db,#cfd2db),
+            linear-gradient(white,white);
+    background-size:
+            calc(1 * (100% / 4)) 100%,
+            calc(2 * (100% / 4)) 100%,
+            calc(3 * (100% / 4)) 100%,
+            calc(4 * (100% / 4)) 100%;
+    background-repeat:no-repeat;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #0e1f4a;
+    width: 8px;
+  }
+}
+
+.textWrapperDirection{
+  direction: ltr;
+}
+
+.textWrapper p,
+.textWrapper b {
+  text-align: left;
+}
+
+.textWrapper p {
+  color: #939393;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.aboutContainer b,
+.aboutContainer p{
+  font-family: inherit;
+}
+
+.aboutContainer b:not(:last-child),
+.aboutContainer p:not(:last-child){
+  margin-bottom: 26px;
+}
+
+.aboutContainer b {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+}

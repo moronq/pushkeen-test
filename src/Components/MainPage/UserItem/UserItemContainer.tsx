@@ -1,30 +1,27 @@
-import React, {useEffect} from 'react';
-import UserItem from "./UserItem";
-import {useAppDispatch, useAppSelector} from "../../../hook/hook";
-import {fetchUsers} from "../../../store/Reducers/UserSlice";
+import React, {useEffect} from 'react'
+import UserItem from './UserItem'
+import {useAppDispatch, useAppSelector} from '../../../hook/hook'
+import {fetchUsers} from '../../../store/Reducers/UserSlice'
+import styles from './UserItem.module.scss'
 
 const UserItemContainer = () => {
 
     const dispatch = useAppDispatch()
-    const {status} = useAppSelector(state => state.userReducer)
+    const {status, usersList} = useAppSelector(state => state.userReducer)
 
-    //
-    // useEffect(()=>{
-    //     console.log('empty logic')
-    // },[])
 
     useEffect(() => {
-        if (status === 'idlk') {
+        if (status === 'idle') {
             dispatch(fetchUsers())
         }
     }, [])
 
     return (
-        <div>
-            <UserItem/>
-        </div>
+        <ul className={styles.usersItemContainer}>
+            {usersList.slice(0,4).map((el)=><UserItem key={el.id} city={el.address.city} name={el.name}/>)}
+        </ul>
     )
 }
 
 
-export default UserItemContainer;
+export default UserItemContainer

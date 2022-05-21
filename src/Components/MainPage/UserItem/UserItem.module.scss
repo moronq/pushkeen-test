@@ -1,0 +1,31 @@
+.userItemBox{
+  width: 239px;
+  height: 143px;
+  border: 1px solid #DADADA;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  &:hover{
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}
+
+.userItemInfo{
+  flex: 1 0 auto;
+  font-family: inherit;
+}
+.userItemName{
+  font-size: 17px;
+  font-weight: 700;
+}
+.uerItemCity{
+  color: rgba(0,0,0,0.41);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+}
+.usersItemContainer{
+  display: flex;
+  gap: 13px;
+}

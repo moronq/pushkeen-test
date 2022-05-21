@@ -1,19 +1,12 @@
 @import 'src/const.scss';
 
 .buttonBody{
-  background: #fff;
   width: auto;
-  min-height: 40px;
   font-family: inherit;
   font-weight: 600;
   display: flex;
   align-items: center;
   &:hover{
     cursor: pointer;
-  }
-  &:active{
-    background: $mainDarkColor;
-    color: #fff;
-    outline: 1px solid #fff;
   }
 }

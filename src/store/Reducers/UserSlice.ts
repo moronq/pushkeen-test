@@ -3,7 +3,7 @@ import {UsersAPI} from "../../api/api";
 import {GetUsersType} from "../../types/UsersTypes";
 
 type initialStateType = {
-    status: 'idlk' | 'loading' | 'succeeded' | 'failed'
+    status: 'idle' | 'loading' | 'succeeded' | 'failed'
     usersList: Array<GetUsersType>
     error: string | undefined
 }
@@ -11,7 +11,7 @@ type initialStateType = {
 
 const initialState:initialStateType = {
     usersList: [],
-    status: 'idlk',
+    status: 'idle',
     error: ''
 }
 
