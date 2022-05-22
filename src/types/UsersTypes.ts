@@ -9,6 +9,13 @@ export type GetUsersType = {
     company: CompanyType
 }
 
+export type UserPostType = {
+    userId: number
+    id: number
+    title: string
+    body: string
+}
+
 type AddressType = {
     street: string
     suite: string
@@ -27,3 +34,4 @@ type CompanyType = {
     catchPhrase: string
     bs: string
 }
+
