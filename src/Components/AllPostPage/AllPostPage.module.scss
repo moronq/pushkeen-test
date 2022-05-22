@@ -1,0 +1,24 @@
+.allPostContainer{
+  margin: 30px auto;
+  max-width: 1025px;
+  padding: 35px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid black;
+}
+.allPostTitle{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.commentList{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.allPostFooter{
+  height: 15px;
+}

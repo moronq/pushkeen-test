@@ -3,7 +3,7 @@ import styles from './MainPage.module.scss'
 import Slider from "./Slider/Slider";
 import TicketsPurchased from "./TicketsPurchased/TicketsPurchased";
 import About from "./About/About";
-import ConcertForm from "./ConcertForm/ConcertForm";
+import InputForm from "../../common/InputForm/InputForm";
 
 
 const MainPage = () => {
@@ -29,7 +29,8 @@ const MainPage = () => {
                         </About>
                     </div>
                     <div className={styles.concertFormWrapper}>
-                        <ConcertForm/>
+                        <InputForm title={'Оставить заявку на проведение концерта'}
+                                   placeholder={'Расскажите о вашем предложении'}/>
                     </div>
                 </div>
                 <div className={styles.aboutGroupWrapper}>

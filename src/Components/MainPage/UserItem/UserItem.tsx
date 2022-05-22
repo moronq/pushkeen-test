@@ -14,7 +14,7 @@ const UserItem: React.FC<UserItemType> = ({ name, id, city}) => {
     const navigate = useNavigate()
 
     const onProfileButtonClick = () => {
-        navigate(`userpage/${id.toString()}`)
+        navigate(`/userpage/${id.toString()}`)
     }
 
     return (

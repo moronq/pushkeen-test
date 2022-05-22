@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Button from "../../common/Button/Button";
 import styles from './Header.module.scss'
 
@@ -6,7 +7,7 @@ const Header = () => {
     return (
         <header className={styles.bodyBar}>
             <nav className={styles.navContainer}>
-                <a className={styles.title} href="#">CONCERN CLUB</a>
+                <NavLink to='/mainPage' className={styles.title}>CONCERN CLUB</NavLink>
                 <div className={styles.navBarButtonContainer}>
                     <Button>
                         Версия для слабовидящих

@@ -9,4 +9,7 @@
   &:hover{
     cursor: pointer;
   }
+  &:disabled{
+    cursor: auto;
+  }
 }

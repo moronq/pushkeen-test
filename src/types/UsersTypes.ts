@@ -16,6 +16,14 @@ export type UserPostType = {
     body: string
 }
 
+export type UserPostCommentsType = {
+    postId: number
+    id: number
+    name: string
+    email: string
+    body: string
+}
+
 type AddressType = {
     street: string
     suite: string

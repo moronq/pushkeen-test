@@ -3,6 +3,9 @@
   outline: 1px solid black;
   max-width: 490px;
   padding: 14px 23px 17px 35px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .postTitle{
@@ -19,10 +22,10 @@
   line-height: 17px;
   color: rgba(0,0,0,0.41);
   display: block;
-  height: 15px;
+  height: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  //white-space: nowrap;
 }
 
 
@@ -41,7 +44,7 @@
 .postsTitleContainer{
   display: flex;
   justify-content: space-between;
-  width: 490px;
+  max-width: 490px;
   align-items: center;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: 500;

@@ -9,7 +9,9 @@ type ButtonType = {
     background?: string
     color?: string
     fontSize?: string
-    callBackFn?: ()=>void
+    callBackFn?: () => void
+    disabled?: boolean
+    borderRadius?: string
 }
 
 const Button: React.FC<ButtonType> = ({
@@ -20,19 +22,22 @@ const Button: React.FC<ButtonType> = ({
                                           color = 'black',
                                           fontSize = '14px',
                                           callBackFn,
+                                          disabled = false,
+                                          borderRadius = '0px',
                                           ...props
                                       }) => {
 
     const styleButton = {
         padding: pdRow + ' ' + pdCol,
         height,
-        background,
+        background: disabled === true ? '#d1d1d1' : background,
         color,
-        fontSize
+        fontSize,
+        borderRadius,
     }
 
     return (
-        <button onClick={callBackFn} className={styles.buttonBody} style={styleButton}>
+        <button disabled={disabled} onClick={callBackFn} className={styles.buttonBody} style={styleButton}>
             {props.children}
         </button>
     );

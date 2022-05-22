@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import styles from './UserPage.module.scss'
-import {useAppDispatch, useAppSelector} from "../../hook/hook";
-import PostList from "./PostList/PostList";
-import {fetchUserInfo, fetchUserPost, userSlice} from "../../store/Reducers/UserSlice";
-import UserInfo from "./UserInfo/UserInfo";
+import {useAppDispatch, useAppSelector} from '../../hook/hook'
+import PostList from './PostList/PostList'
+import {fetchUserInfo, fetchUserPost} from '../../store/Reducers/UserSlice'
+import UserInfo from './UserInfo/UserInfo'
 
 const UserPage = () => {
 
@@ -17,19 +17,10 @@ const UserPage = () => {
     const params = useParams<ParamsType>()
     const dispatch = useAppDispatch()
     const {statusInfo, userInfo, statusPost, userPosts, errorInfo, errorPost} = useAppSelector(state => state.userPage)
-    const {nullStatusPost, nullStatusInfo} = userSlice.actions
 
     useEffect(() => {
-        if (statusInfo === 'idle') {
-            dispatch(fetchUserInfo(params.id as string))
-        }
-        if (statusPost === 'idle') {
-            dispatch(fetchUserPost(params.id as string))
-        }
-        return () => {
-            dispatch(nullStatusInfo())
-            dispatch(nullStatusPost())
-        }
+        dispatch(fetchUserInfo(params.id as string))
+        dispatch(fetchUserPost(params.id as string))
     }, [])
 
 
@@ -44,7 +35,7 @@ const UserPage = () => {
         </>
     } else if (statusInfo === 'failed') {
         contentInfo = <p>{errorInfo}</p>
-    } else if (statusPost === 'failed'){
+    } else if (statusPost === 'failed') {
         contentInfo = <p>{errorPost}</p>
     }
     return (
@@ -56,4 +47,4 @@ const UserPage = () => {
     )
 }
 
-export default UserPage;
+export default UserPage
