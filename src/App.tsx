@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Header from "./Components/Header/Header";
 import MainPage from "./Components/MainPage/MainPage";
@@ -14,9 +14,10 @@ function App() {
             <main>
                 <Routes>
                     <Route path={'/mainPage'} element={<MainPage/>}/>
-                    <Route path={'/'} element={<MainPage/>}/>
+                    <Route path={'/'} element={<Navigate to={'/mainPage'}/>}/>
                     <Route path={'/userPage/:id'} element={<UserPage/>}/>
-                    <Route path={'/userPost/:id/post/:idPost'} element={<PostPage/>}/>
+                    <Route path={'/userPost/:id/post/:idPost'}
+                           element={<PostPage/>}/>
                     <Route path={'/userPost/:id'} element={<AllPostPage/>}/>
                 </Routes>
             </main>
