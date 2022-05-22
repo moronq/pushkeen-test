@@ -24,3 +24,37 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+
+.posts{
+  max-width: 1209px;
+  padding: 0 52px 15px;
+  outline: 1px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.postsContainer{
+  padding: 15px 0 30px;
+}
+
+.postsTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 490px;
+  align-items: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.postsTitleCount{
+  color: #E0E0E0;
+}
+
+.postList{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

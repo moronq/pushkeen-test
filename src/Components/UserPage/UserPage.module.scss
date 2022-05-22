@@ -1,13 +1,12 @@
 .userPageContainer{
   max-width: 1209px;
-  border: 1px solid red;
   padding: 35px 15px;
   margin: 0 auto;
 }
 
 .userPageBody{
   border: 1px solid black;
-  height: 660px;
+  height: auto;
 }
 
 .userNameWrapper, .userInfoWrapper{
@@ -50,24 +49,4 @@
   &:not(:last-child){
     outline: 1px solid black;
   }
-}
-
-
-.posts{
-  max-width: 1209px;
-  padding: 0 52px;
-  outline: 1px solid black;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.postsContainer{
-  padding: 15px 0 30px;
-}
-
-.postTitle{
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 40px;
 }

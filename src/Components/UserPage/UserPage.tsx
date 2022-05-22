@@ -2,14 +2,16 @@ import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import styles from './UserPage.module.scss'
 import {useAppDispatch, useAppSelector} from "../../hook/hook";
+import PostList from "./PostList/PostList";
 import {fetchUserInfo, fetchUserPost, userSlice} from "../../store/Reducers/UserSlice";
-import PostItem from "./PostList/PostItem";
 
 const UserPage = () => {
 
     type ParamsType = {
         id: string
     }
+
+    const COUNT_POST = 3
 
     const params = useParams<ParamsType>()
     const dispatch = useAppDispatch()
@@ -69,15 +71,7 @@ const UserPage = () => {
                         {/*<li className={styles.userInfoItem}>{userInfo.company.bs}</li>*/}
                     </ul>
                 </div>
-                <section className={styles.posts}>
-                    <div className={styles.postsContainer}>
-                        <h5 className={styles.postTitle}>Посты</h5>
-                        <ul className={styles.postList}>
-                            {userPosts.slice(0, 3).map((el) => <PostItem key={el.id} title={el.title} body={el.body}/>
-                            )}
-                        </ul>
-                    </div>
-                </section>
+                <PostList userPosts={userPosts} countPost={COUNT_POST}/>
             </div>
         </main>
     )
