@@ -10,7 +10,8 @@ type InputFormType = {
     idPost?: string
 }
 
-const InputForm: React.FC<InputFormType> = ({title, placeholder, idPost}) => {
+const InputForm: React.FC<InputFormType> = ({title, placeholder,
+                idPost=999}) => {
   const [textForm, setTextForm] = useState('');
   const dispatch = useAppDispatch();
 

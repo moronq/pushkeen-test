@@ -29,7 +29,7 @@ const AllPostPage = () => {
       <h5 className={styles.allPostTitle}>{`Посты ${userInfo.name}`}</h5>
       <ul className={styles.commentList}>
         {userPosts.map((el)=><PostItem postId={el.id} userId={el.userId}
-          key={el.id} title={el.title} body={el.body}/>)}
+          key={el.id} title={el.title} link={true} body={el.body}/>)}
       </ul>
     </>;
   } else if (statusInfo === 'failed') {

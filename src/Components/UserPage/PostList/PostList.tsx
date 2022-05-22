@@ -30,7 +30,8 @@ const PostList:React.FC<PostListType> = ({userPosts, countPost}) => {
         </div>
         <ul className={styles.postList}>
           {userPosts.slice(0, countPost).map((el) => <PostItem key={el.id}
-            title={el.title} userId={el.userId} postId={el.id} body={el.body}/>,
+            title={el.title} userId={el.userId} postId={el.id} link={true}
+           body={el.body}/>,
           )}
         </ul>
       </div>

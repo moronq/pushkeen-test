@@ -32,12 +32,8 @@ const PostPage = () => {
     contentPost = userPosts.length > 0 &&
     <>
       <PostItem showAll={true}
-        title={userPosts.filter((el) => {
-          return el.id.toString() === params.idPost;
-        })[0].title}
-        body={userPosts.filter((el) =>{
-          return el.id.toString() === params.idPost;
-        })[0].body}
+        title={userPosts[0].title}
+        body={userPosts[0].body}
         userId={parseInt(params.id as string)}
         postId={parseInt(params.idPost as string)}/>
       <h5 className={styles.commentTitle}>
