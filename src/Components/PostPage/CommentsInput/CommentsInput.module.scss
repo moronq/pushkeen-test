@@ -1,0 +1,46 @@
+.commentInputWrapper{
+  padding: 15px;
+  width: 100%;
+}
+.commentInputForm{
+  outline: 1px solid black;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.commentInputForm input,
+.commentInputForm textarea{
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  background: #e8e8e8;
+  padding: 5px 15px;
+  height: auto;
+  &:focus {
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 0 25px #e2e2e2;
+  }
+}
+.commentInputContainer{
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+}
+.commentInput{
+  flex-direction: column;
+  height: auto;
+}
+.commentTextArea{
+  min-height: 100px;
+  text-align: left;
+  resize: none;
+}
+.commentButtonContainer{
+  display: flex;
+  justify-content: flex-end;
+}

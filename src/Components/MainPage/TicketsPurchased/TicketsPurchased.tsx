@@ -2,7 +2,7 @@ import React from 'react'
 import UserItemContainer from '../UserItem/UserItemContainer'
 import styles from './TicketsPurchased.module.scss'
 
-const TicketsPurchased = () => {
+const TicketsPurchased: React.FC = () => {
     return (
         <section className={styles.ticketPurchased}>
             <div className={styles.ticketsMainTitleContainer}>
@@ -15,8 +15,7 @@ const TicketsPurchased = () => {
             </div>
             <UserItemContainer/>
         </section>
-
-    );
-};
+    )
+}
 
 export default TicketsPurchased;

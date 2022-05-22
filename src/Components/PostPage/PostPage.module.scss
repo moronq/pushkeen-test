@@ -1,0 +1,29 @@
+.postPageContainer{
+  max-width: 1025px;
+  margin: 0 auto 30px;
+  padding: 30px 15px;
+}
+
+.postPageWrapper{
+  padding: 30px 15px;
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.commentTitle{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.commentsList{
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
